@@ -46,7 +46,7 @@ public class PubSubController {
         !StringUtils.isEmpty(data) ? new String(Base64.getDecoder().decode(data)) : "World";
     String msg = "Hello " + target + "!";
 
-    System.out.println(msg);
+    System.out.println(message.getMessageId() + " :: " + msg);
     return new ResponseEntity(msg, HttpStatus.OK);
   }
 }
